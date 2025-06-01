@@ -1,0 +1,20 @@
+stages:
+  - build
+  - deploy
+
+job_build:
+  stage: build
+  script:
+    - sh ./build.sh $CI_COMMIT_REF_NAME
+  only:
+    - main
+
+job_deploy:
+  stage: deploy
+  script:
+    - cd /opt/hack-server-prod/
+    - docker compose pull
+    - docker compose down
+    - docker compose up -d
+  only:
+    - main
