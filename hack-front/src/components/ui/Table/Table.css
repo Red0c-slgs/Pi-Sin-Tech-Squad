@@ -1,0 +1,155 @@
+.table-container {
+  width: 100%;
+  background-color: var(--text-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.table-filters {
+  padding: 16px;
+  background-color: rgba(138, 43, 226, 0.05);
+  border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.filter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.date-status-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.date-status-container > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+.status-dropdown {
+  min-width: 200px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.data-table th {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.data-table tr:hover {
+  background-color: rgba(138, 43, 226, 0.05);
+}
+
+.no-data {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(138, 43, 226, 0.05);
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+}
+
+.items-dropdown {
+  min-width: 120px;
+  position: relative;
+}
+
+.pagination {
+  display: flex;
+  gap: 4px;
+}
+
+.pagination-button {
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid var(--primary-light);
+  background-color: var(--text-light);
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.pagination-button:hover {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+.pagination-button.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .date-status-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-item {
+    width: 100%;
+  }
+  
+  .table-footer {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .items-per-page {
+    justify-content: center;
+  }
+}

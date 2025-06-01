@@ -1,0 +1,81 @@
+/* Обновлённые цветовые переменные */
+:root {
+  --primary-color: #8a2be2; /* Фиолетовый (как в презентации) */
+  --primary-light: #b980ff;
+  --primary-dark: #5d1ea0;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --background-gradient: linear-gradient(135deg, #1a1a1a, #4b0082); /* Темный градиент */
+  --accent-color: rgba(255, 255, 255, 0.1);
+  --error-color: #ff6b6b;
+  --success-color: #4caf50;
+}
+
+body {
+  background: var(--background-gradient); /* Градиентный фон */
+  color: var(--text-light); /* Белый текст по умолчанию */
+}
+
+/* Стили для заголовков в фиолетовых блоках */
+h1, h2, h3 {
+  /* background: var(--primary-color); */
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+/* Декоративные элементы */
+.section-divider {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.section-divider::before {
+  left: -1.5rem;
+}
+
+.section-divider::after {
+  right: -1.5rem;
+}
+
+
+/* Стили для таблиц и списков */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Анимация для элементов */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+

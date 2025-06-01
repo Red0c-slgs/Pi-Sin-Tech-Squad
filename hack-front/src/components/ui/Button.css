@@ -1,0 +1,108 @@
+.ui-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.ui-button--primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.ui-button--primary:hover:not(.ui-button--disabled) {
+  background-color: var(--primary-dark);
+  box-shadow: var(--box-shadow);
+}
+
+.ui-button--secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.ui-button--secondary:hover:not(.ui-button--disabled) {
+  background-color: rgba(138, 43, 226, 0.1);
+}
+
+.ui-button--text {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 8px 16px;
+}
+
+.ui-button--text:hover:not(.ui-button--disabled) {
+  background-color: rgba(138, 43, 226, 0.05);
+}
+
+.ui-button--success {
+  background-color: var(--success-color);
+  color: var(--text-light);
+}
+
+.ui-button--success:hover:not(.ui-button--disabled) {
+  background-color: #3d8b40;
+}
+
+.ui-button--error {
+  background-color: var(--error-color);
+  color: var(--text-light);
+}
+
+.ui-button--error:hover:not(.ui-button--disabled) {
+  background-color: #e05252;
+}
+
+/* Sizes */
+.ui-button--small {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.ui-button--medium {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+.ui-button--large {
+  padding: 12px 24px;
+  font-size: 1.125rem;
+}
+
+/* Full width */
+.ui-button--full-width {
+  width: 100%;
+}
+
+/* Disabled state */
+.ui-button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animated gradient button */
+.ui-button--animated {
+  background-size: 200% 200%;
+  background-image: linear-gradient(45deg, var(--primary-color), var(--primary-light), var(--primary-dark), var(--primary-color));
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

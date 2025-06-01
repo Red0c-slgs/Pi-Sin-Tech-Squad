@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #8a2be2; /* Фиолетовый (как в презентации) */
+  --primary-light: #b980ff;
+  --primary-dark: #5d1ea0;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --background-gradient: linear-gradient(135deg, #1a1a1a, #4b0082); /* Темный градиент */
+  --accent-color: rgba(255, 255, 255, 0.1);
+  --error-color: #ff6b6b;
+  --success-color: #4caf50;
+  
+  /* Additional variables for components */
+  --border-radius: 4px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}

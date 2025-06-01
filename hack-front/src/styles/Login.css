@@ -1,0 +1,136 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px); /* Adjust based on navbar height */
+  /* padding: 20px; */
+  background-color: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.login-form-wrapper {
+  background-color: var(--color-card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-actions {
+  margin-top: 24px;
+}
+
+.error-message {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.login-toggle {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.login-toggle p {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Background decorative images */
+.login-page::before,
+.login-page::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.login-page::before {
+  left: 5%;
+  top: 60%; /* Сместить ниже центра */
+  transform: translateY(-50%) rotate(3deg); /* Центрировать по вертикали и добавить наклон вправо */
+  width: 700px; /* Увеличено в 4 раза (250px → 1000px) */
+  height: 700px;
+  background-image: url('../assets/images/13.png');
+  animation: float-left 6s ease-in-out infinite;
+}
+
+/* Обновленный стиль для правого изображения */
+.login-page::after {
+  right: 5%;
+  top: 40%; /* Поднять выше центра */
+  transform: translateY(-50%) rotate(-90deg); /* Сохранить вертикальное центрирование */
+  width: 500px; /* Уменьшено в 4 раза (250px → 62.5px) */
+  height: 500px;
+  background-image: url('../assets/images/13.png');
+  animation: float-right 7s ease-in-out infinite;
+}
+
+/* Floating animations */
+@keyframes float-left {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-55%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes float-right {
+  0% {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(-45%) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+/* For smaller screens, hide the decorative images */
+@media (max-width: 1200px) {
+  .login-page::before,
+  .login-page::after {
+    display: none;
+  }
+}

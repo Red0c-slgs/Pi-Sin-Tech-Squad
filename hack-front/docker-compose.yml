@@ -1,0 +1,6 @@
+services:
+  hack-front:
+    image: registry.gitlab.com/tech-squad3/hack-yolo-worker:main
+    container_name: YOLO-prod
+    environment:
+      REACT_APP_PROXY_URL: http://94.154.128.76:5000
